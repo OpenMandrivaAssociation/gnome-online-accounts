@@ -86,7 +86,7 @@ autoreconf -fi
 	--disable-static \
 	--enable-gtk-doc
 
-%make
+%make LIBS='-lgmodule-2.0'
 
 %install
 %makeinstall_std
