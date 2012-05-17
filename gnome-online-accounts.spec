@@ -8,7 +8,7 @@
 %define		develbackend	%mklibname -d %{oname}-backend %{api}
 
 Name:		gnome-online-accounts
-Version:	3.4.1
+Version:	3.4.2
 Release:	1
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
