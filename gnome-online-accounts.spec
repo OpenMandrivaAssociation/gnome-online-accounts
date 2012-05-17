@@ -1,20 +1,20 @@
 %define		oname		goa
-%define		api			1.0
+%define		api		1.0
 %define		major		0
 %define		libname		%mklibname %{oname} %{api} %{major}
 %define		backendname	%mklibname %{oname}-backend %{api} %{major}
-%define		gi_libname	%mklibname %{oname}-gir %{api}
+%define		girname		%mklibname %{oname}-gir %{api}
 %define		develname	%mklibname -d %{oname} %{api}
-%define		develbackend %mklibname -d %{oname}-backend %{api}
+%define		develbackend	%mklibname -d %{oname}-backend %{api}
 
 Name:		gnome-online-accounts
 Version:	3.4.1
-Release:	%mkrel 0
+Release:	1
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
 URL:		http://developer.gnome.org/goa/stable/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 Patch1:		gnome-online-accounts-3.2.0-link.patch
 
 BuildRequires:	gnome-common
@@ -48,18 +48,18 @@ Group:		System/Libraries
 %description -n %{backendname}
 Runtime libraries for %{name}.
 
-%package -n %{gi_libname}
+%package -n %{girname}
 Summary:	GObject introspection interface for %{name}
 Group:		System/Libraries
-Requires:	%{libname} = %{version}-%{release}
 
-%description -n %{gi_libname}
+%description -n %{girname}
 GObject introspection interface for %{name}.
 
 %package -n %{develname}
 Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
+Requires:	%{girname} = %{version}-%{release}
 Provides:	%{oname}-devel = %{version}-%{release}
 
 %description -n %{develname}
@@ -78,7 +78,7 @@ files for developing applications that use gnome-online-accounts.
 
 %prep
 %setup -q
-%patch1 -p1 -b.link
+%apply_patches
 
 %build
 autoreconf -fi
@@ -106,7 +106,7 @@ rm -f %{buildroot}/%{_libdir}/*.la
 %files -n %{backendname}
 %{_libdir}/libgoa-backend-%{api}.so.%{major}*
 
-%files -n %{gi_libname}
+%files -n %{girname}
 %{_libdir}/girepository-1.0/Goa-%{api}.typelib
 
 %files -n %{develname}
