@@ -1,0 +1,10 @@
+--- gnome-online-accounts-3.2.0/src/goabackend/Makefile.am~	2011-09-26 22:47:47.000000000 +0200
++++ gnome-online-accounts-3.2.0/src/goabackend/Makefile.am	2011-09-26 23:41:45.420634885 +0200
+@@ -97,6 +97,7 @@
+ 	$(GNOME_KEYRING_LIBS)					\
+ 	$(REST_LIBS)						\
+ 	$(LIBSOUP_LIBS)						\
++	../goa/libgoa-1.0.la					\
+ 	$(NULL)
+ 
+ # ----------------------------------------------------------------------------------------------------
