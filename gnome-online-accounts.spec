@@ -1,3 +1,5 @@
+%define url_ver %(echo %{version}|cut -d. -f1,2)
+
 %define	oname	goa
 %define	api	1.0
 %define	major	0
@@ -14,7 +16,7 @@ Release:	1
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
 Url:		http://developer.gnome.org/goa/stable/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/3.6/%{name}-%{version}.tar.xz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-online-accounts/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:  gnome-common
 BuildRequires:  gtk-doc
