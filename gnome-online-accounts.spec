@@ -11,7 +11,7 @@
 
 Summary:	Provide online accounts information
 Name:		gnome-online-accounts
-Version:	3.6.2
+Version:	3.8.1
 Release:	1
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
@@ -114,6 +114,7 @@ autoreconf -fi
 %{_includedir}/goa-%{api}/
 %{_libdir}/libgoa-%{api}.so
 %{_libdir}/pkgconfig/goa-%{api}.pc
+%{_libdir}/goa-%{api}/include/goaconfig.h
 %{_datadir}/gir-1.0/Goa-%{api}.gir
 %{_datadir}/gtk-doc/html/goa/
 
