@@ -1,4 +1,5 @@
 removed_sources:
   gnome-online-accounts-3.6.2.tar.xz: efeee570fc8533d327c141c8f4c0695dcb49b49a
-sources:
   gnome-online-accounts-3.8.1.tar.xz: ddb3f1b42c952886cca1949ef68cd7fc110d420b
+sources:
+  gnome-online-accounts-3.8.3.tar.xz: 953e217a1cff86e7e834845985749672f59203ff

@@ -11,7 +11,7 @@
 
 Summary:	Provide online accounts information
 Name:		gnome-online-accounts
-Version:	3.8.1
+Version:	3.8.3
 Release:	1
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
