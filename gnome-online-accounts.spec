@@ -12,7 +12,7 @@
 Summary:	Provide online accounts information
 Name:		gnome-online-accounts
 Version:	3.8.3
-Release:	5
+Release:	6
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
 Url:		http://developer.gnome.org/goa/stable/
