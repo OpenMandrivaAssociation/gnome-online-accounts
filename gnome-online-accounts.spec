@@ -9,7 +9,7 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
 
 Name:		gnome-online-accounts
-Version:	3.14.0
+Version:	 3.16.0
 Release:	2
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
@@ -39,7 +39,7 @@ BuildRequires:	gtk-doc
 BuildRequires:	intltool
 
 %description
-gnome-online-accounts provides interfaces so applications and 
+gnome-online-accounts provides interfaces so applications and
 libraries in GNOME can access the user's online accounts.
 
 %package -n %{libname}
