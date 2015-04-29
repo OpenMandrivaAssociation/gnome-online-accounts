@@ -109,6 +109,7 @@ files for developing applications that use gnome-online-accounts.
 %{_mandir}/man8/goa-daemon.8.*
 %dir %{_libdir}/goa-%{api}
 %{_datadir}/glib-2.0/schemas/org.gnome.online-accounts.gschema.xml
+%{_libdir}/goa-%{api}/web-extensions
 
 %files -n %{libname}
 %{_libdir}/libgoa-%{api}.so.%{major}
