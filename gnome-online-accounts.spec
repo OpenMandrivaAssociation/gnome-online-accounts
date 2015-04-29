@@ -31,7 +31,7 @@ BuildRequires: pkgconfig(libsoup-2.4) >= 2.41
 BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: pkgconfig(rest-0.7)
 BuildRequires: pkgconfig(telepathy-glib) >= 0.19.9
-BuildRequires: pkgconfig(webkitgtk-3.0)
+BuildRequires: pkgconfig(webkit2gtk-4.0)
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(krb5)
 BuildRequires:	gobject-introspection-devel >= 0.6.2
