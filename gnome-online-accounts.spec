@@ -10,7 +10,7 @@
 
 Name:		gnome-online-accounts
 Version:	 3.16.0
-Release:	3
+Release:	4
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
