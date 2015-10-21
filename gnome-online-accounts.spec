@@ -1,3 +1,4 @@
+%define _disable_rebuild_configure 1
 %define	api		1.0
 %define	major		0
 %define	libname		%mklibname goa %{api} %{major}
@@ -10,7 +11,7 @@
 
 Name:		gnome-online-accounts
 Version:	 3.18.1
-Release:	4
+Release:	1
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
