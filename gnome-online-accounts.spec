@@ -106,6 +106,8 @@ files for developing applications that use gnome-online-accounts.
 %doc NEWS
 %{_libexecdir}/goa-daemon
 #{_datadir}/gnome-online-accounts
+%{_libexecdir}/goa-identity-service
+%{_datadir}/dbus-1/services/org.gnome.Identity.service
 %{_datadir}/dbus-1/services/org.gnome.OnlineAccounts.service
 %{_iconsdir}/hicolor/*/apps/*
 %{_mandir}/man8/goa-daemon.8.*
@@ -133,3 +135,4 @@ files for developing applications that use gnome-online-accounts.
 %{_datadir}/gir-1.0/Goa-%{api}.gir
 %{_libdir}/pkgconfig/goa-%{api}.pc
 %{_libdir}/pkgconfig/goa-backend-%{api}.pc
+%exclude %{_libexecdir}/goa-identity-service-3.28.0-1.x86_64.debug
