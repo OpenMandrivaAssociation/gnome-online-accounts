@@ -105,7 +105,7 @@ files for developing applications that use gnome-online-accounts.
 %files -f %{name}.lang
 %doc NEWS
 %{_libexecdir}/goa-daemon
-%{_datadir}/gnome-online-accounts
+#{_datadir}/gnome-online-accounts
 %{_datadir}/dbus-1/services/org.gnome.OnlineAccounts.service
 %{_iconsdir}/hicolor/*/apps/*
 %{_mandir}/man8/goa-daemon.8.*
