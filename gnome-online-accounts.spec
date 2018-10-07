@@ -10,7 +10,7 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
 
 Name:		gnome-online-accounts
-Version:	 3.28.0
+Version:	3.30.0
 Release:	1
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
@@ -110,7 +110,7 @@ files for developing applications that use gnome-online-accounts.
 %{_datadir}/dbus-1/services/org.gnome.Identity.service
 %{_datadir}/dbus-1/services/org.gnome.OnlineAccounts.service
 %{_iconsdir}/hicolor/*/apps/*
-%{_mandir}/man8/goa-daemon.8.*
+#{_mandir}/man8/goa-daemon.8.*
 %dir %{_libdir}/goa-%{api}
 %{_datadir}/glib-2.0/schemas/org.gnome.online-accounts.gschema.xml
 %{_libdir}/goa-%{api}/web-extensions
