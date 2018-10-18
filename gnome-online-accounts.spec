@@ -11,7 +11,7 @@
 
 Name:		gnome-online-accounts
 Version:	3.30.0
-Release:	1
+Release:	2
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
@@ -39,6 +39,7 @@ BuildRequires: pkgconfig(ss)
 BuildRequires: gobject-introspection-devel >= 0.6.2
 BuildRequires: gtk-doc
 BuildRequires: intltool
+BuildRequires: vala-devel
 
 %description
 gnome-online-accounts provides interfaces so applications and
@@ -87,6 +88,7 @@ files for developing applications that use gnome-online-accounts.
 %configure \
 	--disable-static \
 	--enable-gtk-doc \
+	--enable-vala \
 	--enable-exchange \
 	--enable-facebook \
 	--enable-flickr \
@@ -135,4 +137,5 @@ files for developing applications that use gnome-online-accounts.
 %{_datadir}/gir-1.0/Goa-%{api}.gir
 %{_libdir}/pkgconfig/goa-%{api}.pc
 %{_libdir}/pkgconfig/goa-backend-%{api}.pc
+%{_datadir}/vala/vapi/goa-%{api}.*
 %exclude %{_libexecdir}/goa-identity-service-3.28.0-1.x86_64.debug
