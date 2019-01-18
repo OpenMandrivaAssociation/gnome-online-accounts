@@ -82,7 +82,6 @@ files for developing applications that use gnome-online-accounts.
 
 %prep
 %setup -q
-%apply_patches
 
 %build
 %configure \
@@ -97,10 +96,10 @@ files for developing applications that use gnome-online-accounts.
 	--enable-owncloud \
 	--enable-windows-live \
 	--enable-yahoo
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %find_lang %{name} --all-name
 
