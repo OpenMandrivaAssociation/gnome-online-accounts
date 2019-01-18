@@ -81,7 +81,7 @@ The gnome-online-accounts-devel package contains libraries and header
 files for developing applications that use gnome-online-accounts.
 
 %prep
-%setup -q %{name}-%{version}
+%setup -q -n %{name}-%{version}
 
 %build
 %configure \
