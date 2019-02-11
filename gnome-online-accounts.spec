@@ -10,8 +10,8 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
 
 Name:		gnome-online-accounts
-Version:	3.30.0
-Release:	3
+Version:	3.30.2
+Release:	1
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
@@ -81,8 +81,7 @@ The gnome-online-accounts-devel package contains libraries and header
 files for developing applications that use gnome-online-accounts.
 
 %prep
-%setup -q
-%apply_patches
+%setup -q -n %{name}-%{version}
 
 %build
 %configure \
@@ -97,10 +96,10 @@ files for developing applications that use gnome-online-accounts.
 	--enable-owncloud \
 	--enable-windows-live \
 	--enable-yahoo
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %find_lang %{name} --all-name
 
