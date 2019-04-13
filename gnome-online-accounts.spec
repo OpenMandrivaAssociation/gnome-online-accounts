@@ -10,13 +10,14 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
 
 Name:		gnome-online-accounts
-Version:	3.30.2
+Version:	3.32.0
 Release:	1
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
 URL:		http://developer.gnome.org/goa/stable/
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+BuildRequires: pkgconfig(cheese-gtk)
 BuildRequires: pkgconfig(dbus-glib-1)
 BuildRequires: pkgconfig(gcr-3)
 BuildRequires: pkgconfig(gio-2.0) >= 2.33.3
@@ -36,9 +37,10 @@ BuildRequires: pkgconfig(webkit2gtk-4.0)
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(krb5)
 BuildRequires: pkgconfig(ss)
-BuildRequires: gobject-introspection-devel >= 0.6.2
+BuildRequires: pkgconfig(gobject-introspection-1.0)
 BuildRequires: gtk-doc
 BuildRequires: intltool
+BuildRequires: gettext
 BuildRequires: vala-devel
 
 %description
@@ -87,12 +89,14 @@ files for developing applications that use gnome-online-accounts.
 %configure \
 	--disable-static \
 	--enable-gtk-doc \
+	--enable-introspection \
 	--enable-vala \
 	--enable-exchange \
 	--enable-facebook \
 	--enable-flickr \
 	--enable-google \
 	--enable-imap-smtp \
+	--enable-kerberos \
 	--enable-owncloud \
 	--enable-windows-live \
 	--enable-yahoo
