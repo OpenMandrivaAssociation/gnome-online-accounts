@@ -31,7 +31,7 @@ BuildRequires: pkgconfig(libaccounts-glib)
 BuildRequires: pkgconfig(libsecret-1) >= 0.5
 BuildRequires: pkgconfig(libsoup-2.4) >= 2.41
 BuildRequires: pkgconfig(libxml-2.0)
-BuildRequires: pkgconfig(rest-0.7)
+BuildRequires: pkgconfig(rest-1.0)
 BuildRequires: pkgconfig(telepathy-glib) >= 0.19.9
 BuildRequires: pkgconfig(webkit2gtk-4.0)
 BuildRequires: pkgconfig(x11)
