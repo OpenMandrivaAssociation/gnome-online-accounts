@@ -10,8 +10,8 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
 
 Name:		gnome-online-accounts
-Version:	3.44.0
-Release:	2
+Version:	3.46.0
+Release:	1
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
@@ -29,19 +29,19 @@ BuildRequires: pkgconfig(gudev-1.0)
 BuildRequires: pkgconfig(json-glib-1.0)
 BuildRequires: pkgconfig(libaccounts-glib)
 BuildRequires: pkgconfig(libsecret-1) >= 0.5
-BuildRequires: pkgconfig(libsoup-2.4) >= 2.41
+BuildRequires: pkgconfig(libsoup-3.0)
 BuildRequires: pkgconfig(libxml-2.0)
-BuildRequires: pkgconfig(rest-0.7)
+BuildRequires: pkgconfig(rest-1.0)
 BuildRequires: pkgconfig(telepathy-glib) >= 0.19.9
-BuildRequires: pkgconfig(webkit2gtk-4.0)
+BuildRequires: pkgconfig(webkit2gtk-4.1)
 BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(krb5)
 BuildRequires: pkgconfig(ss)
 BuildRequires: pkgconfig(gobject-introspection-1.0)
 BuildRequires: gtk-doc
-BuildRequires: intltool
 BuildRequires: gettext
 BuildRequires: vala-devel
+BuildRequires: meson
 
 %description
 gnome-online-accounts provides interfaces so applications and
@@ -86,24 +86,12 @@ files for developing applications that use gnome-online-accounts.
 %setup -q -n %{name}-%{version}
 
 %build
-%configure \
-	--disable-static \
-	--enable-gtk-doc \
-	--enable-introspection \
-	--enable-vala \
-	--enable-exchange \
-	--enable-facebook \
-	--enable-flickr \
-	--enable-google \
-	--enable-imap-smtp \
-	--enable-kerberos \
-	--enable-owncloud \
-	--enable-windows-live \
-	--enable-yahoo
-%make_build
+%meson	\
+	-Dgtk_doc=true
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %find_lang %{name} --all-name
 
