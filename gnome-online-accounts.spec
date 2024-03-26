@@ -19,12 +19,12 @@ URL:		https://developer.gnome.org/goa/stable/
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires: pkgconfig(cheese-gtk)
 BuildRequires: pkgconfig(dbus-glib-1)
-BuildRequires: pkgconfig(gcr-3)
+BuildRequires: pkgconfig(gcr-4)
 BuildRequires: pkgconfig(gio-2.0) >= 2.33.3
 BuildRequires: pkgconfig(gio-unix-2.0) >= 2.35
 BuildRequires: pkgconfig(glib-2.0) >= 2.33.3
 BuildRequires: pkgconfig(gobject-2.0)
-BuildRequires: pkgconfig(gtk+-3.0) >= 3.5.1
+BuildRequires: pkgconfig(gtk4)
 BuildRequires: pkgconfig(gudev-1.0)
 BuildRequires: pkgconfig(json-glib-1.0)
 BuildRequires: pkgconfig(libaccounts-glib)
