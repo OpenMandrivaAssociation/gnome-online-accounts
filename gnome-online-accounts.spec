@@ -2,7 +2,7 @@
 %define	api		1.0
 %define	major		0
 %define	libname		%mklibname goa %{api} %{major}
-%define backendmajor	1
+%define backendmajor	2
 %define libbackend	%mklibname goa-backend %{api} %{backendmajor}
 %define	gi_libname	%mklibname goa-gir %{api}
 %define	develname	%mklibname -d goa
