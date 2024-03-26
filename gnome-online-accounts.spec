@@ -10,12 +10,12 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
 
 Name:		gnome-online-accounts
-Version:	3.48.0
-Release:	3
+Version:	3.50.0
+Release:	1
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
 License:	LGPLv2+
-URL:		http://developer.gnome.org/goa/stable/
+URL:		https://developer.gnome.org/goa/stable/
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires: pkgconfig(cheese-gtk)
 BuildRequires: pkgconfig(dbus-glib-1)
