@@ -28,6 +28,7 @@ BuildRequires: pkgconfig(gtk4)
 BuildRequires: pkgconfig(gudev-1.0)
 BuildRequires: pkgconfig(json-glib-1.0)
 BuildRequires: pkgconfig(libaccounts-glib)
+BuildRequires: pkgconfig(libadwaita-1)
 BuildRequires: pkgconfig(libsecret-1) >= 0.5
 BuildRequires: pkgconfig(libsoup-3.0)
 BuildRequires: pkgconfig(libxml-2.0)
