@@ -99,15 +99,14 @@ files for developing applications that use gnome-online-accounts.
 %files -f %{name}.lang
 %doc NEWS
 %{_libexecdir}/goa-daemon
-#{_datadir}/gnome-online-accounts
 %{_libexecdir}/goa-identity-service
+%{_libexecdir}/goa-oauth2-handler
+%{_datadir}/applications/org.gnome.OnlineAccounts.OAuth2.desktop
 %{_datadir}/dbus-1/services/org.gnome.Identity.service
 %{_datadir}/dbus-1/services/org.gnome.OnlineAccounts.service
 %{_iconsdir}/hicolor/*/apps/*
-#{_mandir}/man8/goa-daemon.8.*
 %dir %{_libdir}/goa-%{api}
 %{_datadir}/glib-2.0/schemas/org.gnome.online-accounts.gschema.xml
-#{_libdir}/goa-%{api}/web-extensions
 
 %files -n %{libname}
 %{_libdir}/libgoa-%{api}.so.%{major}
