@@ -10,7 +10,7 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
 
 Name:		gnome-online-accounts
-Version:	3.50.4
+Version:	3.51.3
 Release:	1
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
@@ -29,6 +29,7 @@ BuildRequires: pkgconfig(gudev-1.0)
 BuildRequires: pkgconfig(json-glib-1.0)
 BuildRequires: pkgconfig(libaccounts-glib)
 BuildRequires: pkgconfig(libadwaita-1)
+BuildRequires: pkgconfig(libkeyutils)
 BuildRequires: pkgconfig(libsecret-1) >= 0.5
 BuildRequires: pkgconfig(libsoup-3.0)
 BuildRequires: pkgconfig(libxml-2.0)
@@ -39,6 +40,7 @@ BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(krb5)
 BuildRequires: pkgconfig(ss)
 BuildRequires: pkgconfig(gobject-introspection-1.0)
+Buildrequires: gi-docgen
 BuildRequires: gtk-doc
 BuildRequires: gettext
 BuildRequires: vala-devel
@@ -120,7 +122,7 @@ files for developing applications that use gnome-online-accounts.
 %{_libdir}/girepository-1.0/Goa-%{api}.typelib
 
 %files -n %{develname}
-%doc %{_datadir}/gtk-doc/html/goa/
+%doc %{_datadir}/doc/gnome-online-accounts*
 %{_includedir}/goa-%{api}/
 %{_libdir}/goa-%{api}/include
 %{_libdir}/libgoa-%{api}.so
@@ -129,4 +131,4 @@ files for developing applications that use gnome-online-accounts.
 %{_libdir}/pkgconfig/goa-%{api}.pc
 %{_libdir}/pkgconfig/goa-backend-%{api}.pc
 %{_datadir}/vala/vapi/goa-%{api}.*
-%exclude %{_libexecdir}/goa-identity-service-3.28.0-1.x86_64.debug
+%{_mandir}/man8/goa-daemon.8.*
