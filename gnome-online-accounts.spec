@@ -122,7 +122,6 @@ files for developing applications that use gnome-online-accounts.
 %{_libdir}/girepository-1.0/Goa-%{api}.typelib
 
 %files -n %{develname}
-%doc %{_datadir}/gtk-doc/html/goa/
 %{_includedir}/goa-%{api}/
 %{_libdir}/goa-%{api}/include
 %{_libdir}/libgoa-%{api}.so
@@ -131,4 +130,3 @@ files for developing applications that use gnome-online-accounts.
 %{_libdir}/pkgconfig/goa-%{api}.pc
 %{_libdir}/pkgconfig/goa-backend-%{api}.pc
 %{_datadir}/vala/vapi/goa-%{api}.*
-%exclude %{_libexecdir}/goa-identity-service-3.28.0-1.x86_64.debug
