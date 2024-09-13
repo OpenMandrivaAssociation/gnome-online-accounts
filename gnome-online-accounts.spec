@@ -122,6 +122,7 @@ files for developing applications that use gnome-online-accounts.
 %{_libdir}/girepository-1.0/Goa-%{api}.typelib
 
 %files -n %{develname}
+%doc %{_datadir}/doc/gnome-online-accounts*
 %{_includedir}/goa-%{api}/
 %{_libdir}/goa-%{api}/include
 %{_libdir}/libgoa-%{api}.so
