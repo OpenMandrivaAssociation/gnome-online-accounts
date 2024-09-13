@@ -131,3 +131,4 @@ files for developing applications that use gnome-online-accounts.
 %{_libdir}/pkgconfig/goa-%{api}.pc
 %{_libdir}/pkgconfig/goa-backend-%{api}.pc
 %{_datadir}/vala/vapi/goa-%{api}.*
+%{_mandir}/man8/goa-daemon.8.*
