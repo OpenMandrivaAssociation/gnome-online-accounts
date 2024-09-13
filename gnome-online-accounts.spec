@@ -40,6 +40,7 @@ BuildRequires: pkgconfig(x11)
 BuildRequires: pkgconfig(krb5)
 BuildRequires: pkgconfig(ss)
 BuildRequires: pkgconfig(gobject-introspection-1.0)
+Buildrequires: gi-docgen
 BuildRequires: gtk-doc
 BuildRequires: gettext
 BuildRequires: vala-devel
