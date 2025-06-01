@@ -10,7 +10,7 @@
 %define url_ver %(echo %{version} | cut -d. -f1,2)
 
 Name:		gnome-online-accounts
-Version:	3.54.2
+Version:	3.54.3
 Release:	1
 Summary:	Provide online accounts information
 Group:		Graphical desktop/GNOME
