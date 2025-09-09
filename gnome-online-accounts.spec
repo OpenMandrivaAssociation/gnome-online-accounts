@@ -108,7 +108,7 @@ files for developing applications that use gnome-online-accounts.
 %{_datadir}/dbus-1/services/org.gnome.OnlineAccounts.service
 %{_iconsdir}/hicolor/*/apps/*
 %dir %{_libdir}/goa-%{api}
-%{_datadir}/glib-2.0/schemas/org.gnome.online-accounts.gschema.xml
+#{_datadir}/glib-2.0/schemas/org.gnome.online-accounts.gschema.xml
 
 %files -n %{libname}
 %{_libdir}/libgoa-%{api}.so.%{major}
